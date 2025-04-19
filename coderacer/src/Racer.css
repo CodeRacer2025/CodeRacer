@@ -1,0 +1,260 @@
+:root {
+  --shared-box-width: 500px;
+  --shared-box-height: 400px;
+}
+
+.container {
+  display: flex;
+  font-family: sans-serif;
+  min-height: 100vh;
+  background-color: #1f1f1f;
+}
+
+.history-panel {
+  width: 240px;
+  background-color: #000000a9;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-title {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  margin-top: 0%;
+  background-color: #000000a9;
+}
+
+.history-content {
+  flex-grow: 1;
+  max-height: 100vh;
+  overflow-y: hidden;
+  padding: 1rem;
+  
+}
+
+.history-content:hover {
+  overflow-y: auto;
+}
+
+
+/* Typing Panel Centered */
+.typing-panel {
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% - 180px);
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.typing-panel h1 {
+  margin-top: 15px;
+  position: relative;
+  z-index: 10;
+}
+
+.textarea-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.fake-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  padding: 1rem;
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: #aaa;
+  line-height: 1.6;
+  z-index: 1;
+  pointer-events: none;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+
+.textarea-wrapper textarea {
+  flex: 1;
+  overflow: auto;
+  background-color: #111;
+  color: #eee;
+  font-family: monospace;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  padding: 1rem;
+  border: 1px solid #00ff90;
+  border-radius: 8px;
+  white-space: pre;
+}
+
+.textarea-wrapper textarea::-webkit-scrollbar {
+  display: none;                 
+}
+
+.race-entry {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+.filters button {
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: #ccc;
+  margin: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.filters button.selected {
+  border: 2px solid white;
+  background-color: #333;
+  color: #00ff90;
+  font-weight: bold;
+}
+
+.race-detail-container {
+  text-align: center;
+  margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.race-title {
+  font-size: 28px;
+  color: #00ff90;
+  margin-bottom: 0.5rem;
+}
+
+.race-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.race-meta p strong {
+  color: #aaa;
+}
+
+.race-detail-box {
+  background: #000000;
+  border: 1px solid #00ff90;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  color: #c9d1d9;
+  font-family: 'Fira Code', monospace;
+  white-space: pre-wrap;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.race-detail-buttons {
+  display: flex;
+  justify-content: center;     
+  gap: 10rem;                 
+  margin: 2rem auto 1rem;
+}
+
+
+.back-button,
+.delete-button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  min-width: 140px; 
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.back-button {
+  background-color: #444;
+  color: #fff;
+}
+
+.delete-button {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+.typing-pair {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+.textarea-wrapper,
+.display-box {
+  width: var(--shared-box-width);
+  height: var(--shared-box-height);
+  flex-shrink: 0;
+  flex-grow: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.display-box {
+  flex: 1;
+  overflow: auto;
+  background-color: #111;
+  color: #eee;
+  font-family: monospace;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  padding: 1rem;
+  border: 1px solid #00ff90;
+  border-radius: 8px;
+  white-space: pre;
+}
+
+.display-box::-webkit-scrollbar {
+  display: none;
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.5rem; /* Larger text */
+  margin: 1rem 0;
+  color: #eee;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat .label {
+  color: #aaa;
+  margin-right: 0.5rem;
+}
