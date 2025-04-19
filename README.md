@@ -1,25 +1,12 @@
-To run our app follow these steps:
-1. CD into the typeracefolder
-2. run npm install
-3. Create an .env file in the coderacer directory
-4. Create 3 variables with the following names and values:
- - VITE_GEMINI_KEY
-    - obtain this by generating a Google Gemini API key
-    - This should be a mix of numbers as well as upper and lower case letters
- - VITE_GOOGLE_CLIENT_ID
-    - obtain this by generating a Google OAuth 2.0 Client ID
-    - This should be a long string of numbers and letters ending with ".apps.googleusercontent.com"
- - VITE_FIREBASE_CONFIG
-    - obtain this by creating a Firestore database and locating the given config settings
-    - Please format the config settings into the following format:
-    '{"apiKey":"???",
-    "authDomain":"???
-    ","projectId":"???",
-    "storageBucket":"???",
-    "messagingSenderId":"???",
-    "appId":"???", 
-    "measurementId":"???"}'
-5. Alternatively to step 4, you can emial us at sozinsky@uw.edu or droser@uw.edu and we will provide you with the .env file, if we like you
-6. Run npm run dev to start the app and navigate to http://localhost:5173/ to view the app in action
+# React + Vite
 
-** hosting coming soon **
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
