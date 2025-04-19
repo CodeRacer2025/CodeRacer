@@ -104,7 +104,8 @@ const Login = () => {
       <div className={styles.loginContainer}>
         <div className={styles.loginTitle}>Welcome to Code Racer</div>
         <div className={styles.googleLoginButton}>
-          <GoogleLogin onSuccess={handleSuccess} onError={handleError} />
+          <GoogleLogin onSuccess={handleSuccess} onError={handleError} redirectUri="https://coderacer2025.github.io/CodeRacer"
+ />
         </div>
         <div className={styles.codeSplitView}>
           <div className={styles.codeBox}>
